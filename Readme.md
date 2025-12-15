@@ -6,7 +6,7 @@ This project focuses on **attacker behavior**, **automation**, and **MITRE ATT&C
 
 ---
 
-<img src =".\screenshots\discovery,Token.png">
+<img src =".\screenshots\discover,Token.png">
 
 
 ## 🎯 Project Objectives
