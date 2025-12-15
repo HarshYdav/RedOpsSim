@@ -11,11 +11,12 @@ This project focuses on **attacker behavior**, **automation**, and **MITRE ATT&C
 
 ## 🎯 Project Objectives
 
-- Simulate real-world attacker post-exploitation behavior
-- Demonstrate automated execution, discovery, and privilege analysis
-- Collect and exfiltrate results to an attacker-controlled system
-- Map every action to the MITRE ATT&CK framework
-- Help SOC and security teams understand attacker techniques
+- Simulate real-world attacker post-exploitation behavior in enterprise environments
+- Demonstrate automated execution, discovery, and privilege-context awareness
+- Collect and exfiltrate results to an attacker-controlled system (C2-style)
+- Simulate attacker impact and malware behavior in a **safe, controlled manner**
+- Bridge offensive techniques with SOC / detection understanding
+- Map every activity to the MITRE ATT&CK framework
 
 
 RedOpsSim acts as a **mini command-and-control (C2) style agent** in a controlled lab.
@@ -65,12 +66,57 @@ T1119, T1041
 
 ---
 
+
+## 🔥 Advanced Simulation Modules (Safe & Optional)
+
+---
+
+### 🔹 Module 7 — Impact Simulation (Ransomware-like)
+- Controlled ransomware **impact simulation**
+- Operates only inside a dedicated test directory
+- Renames dummy files to simulate encryption
+- Drops a clear simulation ransom note
+- Exfiltrates structured impact report
+
+⚠️ **No real encryption or data damage**
+
+**MITRE ATT&CK:**  
+T1486 (Simulated)
+
+---
+
+### 🔹 Module 8 — Malware Behavior Simulation
+- Simulates malware lifecycle behavior
+- Creates infection marker file
+- Collects host and user context
+- Exfiltrates infection status to attacker
+
+**MITRE ATT&CK:**  
+T1059, T1105, T1119
+
+---
+
+### 🔹 Module 9 — Detection-Focused Ransomware Simulation (SOC View)
+- Simulates ransomware detection indicators
+- Rapid file-renaming activity
+- Suspicious extension generation
+- Produces SOC-focused detection report
+
+Designed to demonstrate **how defenders detect ransomware**, not how attackers evade detection.
+
+**MITRE ATT&CK:**  
+T1486 (Simulated), T1119
+
+---
+
 ## 🏗️ Lab Architecture
 
 - **Attacker:** Kali Linux
 - **Victim:** Windows 11 (Domain-joined)
-- **Domain Controller:** Windows Server
+- **Domain Controller:** Windows Server (Active Directory)
 - **Communication:** HTTP (Lab-safe)
+- **Scope:** Isolated virtual lab only
+
 
 ---
 ## 👤 Author
