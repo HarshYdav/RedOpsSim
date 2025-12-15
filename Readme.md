@@ -6,6 +6,9 @@ This project focuses on **attacker behavior**, **automation**, and **MITRE ATT&C
 
 ---
 
+<img src =".\screenshots\discovery,Token.png">
+
+
 ## 🎯 Project Objectives
 
 - Simulate real-world attacker post-exploitation behavior
